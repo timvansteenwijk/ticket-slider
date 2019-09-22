@@ -1,0 +1,9 @@
+<ngb-carousel *ngIf="ticketList" interval=0>
+    <ng-template ngbSlide *ngFor="let ticket of ticketList">
+        <div class="carousel-card">
+            <h3>{{ticket.ticketType}}</h3>
+            <p>Pieces of luggage: {{ticket.luggage}}</p>
+            <p>Price {{ticket.price}}</p>
+        </div>
+    </ng-template>
+</ngb-carousel>
