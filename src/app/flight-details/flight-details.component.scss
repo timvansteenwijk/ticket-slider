@@ -4,6 +4,15 @@ ul {
     padding: 0;
 }
 
+.journey-time {
+    font-size: 10px;
+}
+
 .wrapper {
+    height: 140px;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-bottom: 1px solid lightgray;
 }

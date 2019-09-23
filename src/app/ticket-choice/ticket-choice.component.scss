@@ -1,13 +1,30 @@
 h2 {
-    font-size: 20px; 
-    text-transform: uppercase;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  align-self: flex-end;
+  font-size: 10px;
+}
+
+select {
+  border:0px;
+  outline:0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #65a3f0;
+  text-transform: uppercase;
+  background-color: #e1eced;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-app-carousel {
-    align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 10px;
+  background: #e1eced;
 }

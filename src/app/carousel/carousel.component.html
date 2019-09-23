@@ -1,9 +1,28 @@
-<ngb-carousel *ngIf="ticketList" interval=0>
-    <ng-template ngbSlide *ngFor="let ticket of ticketList">
-        <div class="carousel-card">
-            <h3>{{ticket.ticketType}}</h3>
-            <p>Pieces of luggage: {{ticket.luggage}}</p>
-            <p>Price {{ticket.price}}</p>
+<div class="carousel-wrapper">
+    <div *ngFor="let ticket of ticketList" class="carousel-card">
+        <h3>{{ticket.ticketType}}</h3>
+        <div class="card-body">
+            <div class="card-top">
+                <div *ngIf="ticket.luggage===1">1 hand baggage item and 1 accessory only (12 kg total*)</div>
+                <div *ngIf="ticket.luggage===2">1 hand baggage item and 1 accessory (12 kg total*)
+                    and 1 check-in baggage iteam(s) (23 kg each) included</div>
+                <div *ngIf="ticket.ticketType=='Standard' || ticket.ticketType=='Flex'">
+                    Choice of standard seat
+                </div>
+                <div *ngIf="ticket.ticketType=='Comfort'">
+                    Seat plus <a href="">Seat details</a>
+                </div>
+                <div *ngIf="ticket.typeId==4">
+                    Change fee EUR 0 + face difference
+                </div>
+            </div>
+            <div class="card-bottom">
+                <div class="price">EUR {{ticket.price}}</div>
+                <div class="button-wrapper">
+                    <button class="more-button">View more</button>
+                    <button class="confirm-button">Confirm</button>
+                </div>
+            </div>
         </div>
-    </ng-template>
-</ngb-carousel>
+    </div>
+</div>

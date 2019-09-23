@@ -8,15 +8,26 @@ import { Component, OnInit } from '@angular/core';
 export class CarouselComponent implements OnInit {
   ticketList = [
     {
-      ticketType: 'Standard',
+      ticketType: 'Light',
       luggage: 1,
-      price: 249
+      price: 233
+    },
+    {
+      ticketType: 'Standard',
+      luggage: 2,
+      price: 427
     },
     {
       ticketType: 'Comfort',
       luggage: 2,
-      price: 399
-    }
+      price: 440
+    },
+    {
+      ticketType: 'Flex',
+      typeId: 4,
+      luggage: 2,
+      price: 627
+    },
   ];
 
   constructor() {}
