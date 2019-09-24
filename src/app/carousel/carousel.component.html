@@ -1,6 +1,9 @@
 <div class="carousel-wrapper">
     <div *ngFor="let ticket of ticketList" class="carousel-card">
-        <h3>{{ticket.ticketType}}</h3>
+        <div class="card-header">
+            <h3>{{ticket.ticketType}}</h3>
+            <div class="price">EUR {{ticket.price}}</div>
+        </div>
         <div class="card-body">
             <div class="card-top">
                 <div *ngIf="ticket.luggage===1">1 hand baggage item and 1 accessory only (12 kg total*)</div>
@@ -17,7 +20,6 @@
                 </div>
             </div>
             <div class="card-bottom">
-                <div class="price">EUR {{ticket.price}}</div>
                 <div class="button-wrapper">
                     <button class="more-button">View more</button>
                     <button class="confirm-button">Confirm</button>
