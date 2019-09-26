@@ -2,6 +2,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    scroll-snap-type: x mandatory;
 }
 
 .card-top {
@@ -10,13 +11,14 @@
 
 .carousel-card {
   height: 290px;
-  width: 290px;
+  width: 85vw;
   background-color: white;
   margin: 15px;
   border: 1px solid lightgray;
   display: inline-block; 
   white-space: normal;
   box-shadow: 0px 1px 5px 0px rgba(171,171,171,1);
+  scroll-snap-align: center;
 }
 
 .card-body {
